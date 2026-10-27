@@ -60,7 +60,7 @@ AstrBot WebUI → 插件管理 → 从插件市场安装，搜索 `call_guard`�
 AstrBot WebUI → 插件管理 → 从仓库安装，填入：
 
 ```
-https://github.com/zztao/astrbot_plugin_call_guard
+https://github.com/Huohuahui/astrbot_plugin_call_guard
 ```
 
 ### 方式三：手动安装
