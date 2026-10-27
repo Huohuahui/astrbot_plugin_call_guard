@@ -1,5 +1,24 @@
-name: call_guard
-desc: 单人刷屏静默防护 - 检测到某人频繁call机器人(艾特/回复)自动拉进静默期，阈值0-1控制静默期内回复概率
-version: v1.0.0
+name: astrbot_plugin_call_guard
+display_name: 单人静默防护 Call Guard
+short_desc: 有人狂call机器人？自动把他拉进静默期，按概率放行回复，精准限人不误伤全群
+desc: |
+  **单人刷屏静默防护** —— 不要再靠全局限速误伤所有群友。
+
+  - 检测某人频繁 call 机器人（艾特机器人 / 引用回复机器人消息），窗口内超过阈值就把他拉进静默期
+  - 静默期内每次 call 按 `reply_probability`（0-1）概率放行，其余直接丢弃，**不消耗 LLM token**
+  - 管理员豁免；`/` 开头的指令不计数也不拦截；私聊不受影响
+  - 状态持久化，重启不丢；零第三方依赖
+
+  典型场景：群友无聊时反复艾特机器人，用 0.2 的概率偶尔回一下，既不失礼也不烧 token。
+version: 1.0.0
 author: Huohuahui
 repo: https://github.com/Huohuahui/astrbot_plugin_call_guard
+astrbot_version: ">=4.9.0"
+support_platforms:
+  - aiocqhttp
+social_link: https://github.com/Huohuahui
+tags:
+  - 防刷屏
+  - 限速
+  - 群管理
+  - token 节省
