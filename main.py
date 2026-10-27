@@ -29,7 +29,7 @@ STATE_FILE = os.path.join("data", "plugin_data", "call_guard", "state.json")
     "call_guard",
     "wb-helper",
     "单人刷屏静默防护：频繁call机器人的群友自动进静默期，按概率放行回复",
-    "v1.0.1",
+    "v1.0.2",
 )
 class CallGuardPlugin(Star):
     def __init__(self, context: Context, config: AstrBotConfig) -> None:

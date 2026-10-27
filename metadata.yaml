@@ -10,7 +10,7 @@ desc: |
   - 状态持久化，重启不丢；零第三方依赖
 
   典型场景：群友无聊时反复艾特机器人，用 0.2 的概率偶尔回一下，既不失礼也不烧 token。
-version: 1.0.1
+version: 1.0.2
 author: Huohuahui
 repo: https://github.com/Huohuahui/astrbot_plugin_call_guard
 astrbot_version: ">=4.9.0"
