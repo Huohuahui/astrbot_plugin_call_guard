@@ -1,0 +1,5 @@
+name: call_guard
+desc: 单人刷屏静默防护 - 检测到某人频繁call机器人(艾特/回复)自动拉进静默期，阈值0-1控制静默期内回复概率
+version: v1.0.0
+author: Huohuahui
+repo: https://github.com/Huohuahui/astrbot_plugin_call_guard

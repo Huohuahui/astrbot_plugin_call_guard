@@ -1,0 +1,52 @@
+{
+  "enable": {
+    "description": "启用单人静默防护",
+    "type": "bool",
+    "default": true,
+    "hint": "总开关。关闭后不做任何计数和拦截。"
+  },
+  "scope_groups": {
+    "description": "生效群列表",
+    "type": "list",
+    "default": [],
+    "items": { "type": "string" },
+    "hint": "只对这些群生效，可填完整会话ID或纯群号。留空表示所有群聊都生效。私聊不受影响。"
+  },
+  "window_seconds": {
+    "description": "计数窗口（秒）",
+    "type": "int",
+    "default": 120,
+    "hint": "在这个时间窗口内统计某人 call 机器人的次数。"
+  },
+  "call_limit": {
+    "description": "触发静默的 call 次数",
+    "type": "int",
+    "default": 5,
+    "hint": "窗口内 call 机器人（艾特或回复机器人）达到该次数，就把这个人拉进静默期。"
+  },
+  "silence_seconds": {
+    "description": "静默时长（秒）",
+    "type": "int",
+    "default": 600,
+    "hint": "触发后该用户进入静默期的时长。静默期内每次 call 只有下方概率会被放行回复。"
+  },
+  "reply_probability": {
+    "description": "静默期内回复概率（0-1）",
+    "type": "float",
+    "default": 0.2,
+    "hint": "静默期内收到 call 时按此概率放行回复，其余直接丢弃不消耗 token。0=完全不理，1=照常回复。"
+  },
+  "exempt_admins": {
+    "description": "管理员豁免",
+    "type": "bool",
+    "default": true,
+    "hint": "管理员不计入统计也不会被静默。"
+  },
+  "exempt_users": {
+    "description": "豁免用户列表",
+    "type": "list",
+    "default": [],
+    "items": { "type": "string" },
+    "hint": "这些用户QQ号永不触发静默（填纯QQ号）。"
+  }
+}
