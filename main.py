@@ -12,17 +12,15 @@
 - 只对群聊生效；私聊不受影响。
 """
 
-import datetime
 import json
 import os
 import random
 import time
 
-from astrbot.api import AstrBotConfig
+from astrbot.api import AstrBotConfig, logger
 from astrbot.api.event import filter, AstrMessageEvent
 from astrbot.api.star import Context, Star, register
 from astrbot.api.message_components import At, Reply
-from astrbot.core import logger
 
 STATE_FILE = os.path.join("data", "plugin_data", "call_guard", "state.json")
 
@@ -31,7 +29,7 @@ STATE_FILE = os.path.join("data", "plugin_data", "call_guard", "state.json")
     "call_guard",
     "wb-helper",
     "单人刷屏静默防护：频繁call机器人的群友自动进静默期，按概率放行回复",
-    "v1.0.0",
+    "v1.0.1",
 )
 class CallGuardPlugin(Star):
     def __init__(self, context: Context, config: AstrBotConfig) -> None:
